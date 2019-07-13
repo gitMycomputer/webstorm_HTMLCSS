@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-形变中心点</title>
+    <style>
+        <!--
+        /*使三个li重叠：让ul相对定位，li绝对定位并设置top 0 left0*/
+        -->
+        /*
+        形变中心点：transform_origin
+        接受三种形参：像素 百分比 关键词（left top.....）
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            /*position: relative;*/
+        }
+        ul li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: absolute;
+            /*transform-origin: 0px 0px;*/
+            /*transform-origin: 0% 50%;*/
+            transform-origin: left top;
+        }
+        ul li:nth-child(1){
+            background-color: red;
+            transform: rotate(30deg);
+        }
+        ul li:nth-child(2){
+            background-color: green;
+            transform: rotate(50deg);
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+            transform: rotate(70deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

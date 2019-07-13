@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云层动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 1000px;
+            height: 500px;
+            margin: 100px auto;
+            background-color: skyblue;
+            position: relative;
+            animation: change 5s linear 0s infinite alternate;/*规定其为循环，左右动画*/
+            overflow: hidden;/*隐藏住超出的部分*/
+        }
+        ul li{
+            list-style: none;
+            width: 400%;
+            height: 100%;
+            /*background-color: blue;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        ul li:nth-child(1){
+            background-image: url("cloud-one.jpg");
+            animation: move_one 3s linear 0s infinite alternate;
+        }
+        ul li:nth-child(2){
+            background-image: url("cloud-two.jpg");
+            animation: move_two 3s linear 0s infinite alternate;
+        }
+        ul li:nth-child(3){
+            background-image: url("cloud-three.jpg");
+            animation: move_three 3s linear 0s infinite alternate;
+        }
+        @keyframes change {
+            from{
+                background-color: skyblue;
+            }to{
+                             background-color: black;}
+        }
+        @keyframes move_one {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -100%;
+            }
+        }
+        @keyframes move_two {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: 200%;
+            }
+        }
+        @keyframes move_three {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -300%;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单中按钮</title>
+</head>
+<body>
+<!--
+    按钮类型：button image reset submit hidden
+-->
+<form action="http://www.baidu.com">
+    账号：<input type="text" value="player" name="name"><br>
+    密码;<input type="password" value="123" name="password"><br>
+    <input type="button" value="我是一个普通的button按钮"><br>
+    <input type="image" src="./15.jpg" width="200px"><br>
+    <!--
+        reset按钮有默认值 可以不写value
+        用于清空邮内容的input标签
+    -->
+    <input type="reset" value="重置"><br>
+    <!--
+        submit按钮有默认值 可以不写value
+        用于提交数据值指定对象
+        1.需要指定提交对象，在form标签中的action属性
+        2.需要指定提交内容，只提交有name属性的内容
+    -->
+    <input type="submit" value="提交"><br>
+    <!--
+        隐藏按钮，用于隐式提交内容，用户不可见
+    -->
+    <input type="hidden" value="6666" name="sw"><br>
+
+
+
+</form>
+
+</body>
+</html>

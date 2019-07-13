@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-无限滚动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin: 100px auto;
+            width: 600px;
+            height: 200px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        ul{
+            width: 2000px;
+            height: 200px;
+            background-color: black;
+
+            border: 1px solid #000;
+            box-sizing: border-box;
+            animation: move 10s linear 0s infinite normal;
+            overflow: hidden;
+        }
+        ul li{
+            overflow: hidden;
+            float: left;
+            list-style: none;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+        /*
+        由于单纯的无法平铺li于是改变其父元素为div，此时我们要让ul做滚动
+        无限滚动原理在于后面连接上前两张图片，在动画播完后立即返回的是前两张图片，人眼看不到改变
+
+        */
+        @keyframes move {
+            form{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -900px;
+            }
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        /*
+        改变透明度其所展示的是背景颜色。在这里是ul的背景，由于是黑色显示出半黑的效果
+        */
+        ul:hover li{
+            opacity: 0.5;
+        }
+        ul li:hover{/*由于其更加精准，因此可以改变*/
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

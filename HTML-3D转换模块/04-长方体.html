@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-长方体</title>
+    <!--
+    长方体相当于正方体四个面被拉伸，而其他两个面没有。scale（）
+    注意：父元素被拉伸后子元素随之拉伸,所以宽高只要是拉伸之前即可
+
+    动画方面：
+    由于是整体动所以给ul添加动画。
+    为了实现近大远小的效果要perspective，而perspective要添加到父元素中也就是body
+    这里需要设置img的宽高
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 500px;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            animation: scroll 10s linear 0s infinite normal;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        ul li:nth-child(1){
+            background-color: red;
+            transform: rotateX(90deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(2){
+            background-color: blue;
+            transform: rotateX(180deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(3){
+            background-color: yellow;
+            transform: rotateX(270deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(4){
+            background-color: green;
+            transform: rotateX(360deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(5) {
+            background-color: purple;
+            transform: translateX(-200px) rotateY(90deg);
+        }
+        ul li:nth-child(6){
+            background-color: skyblue;
+            transform: translateX(200px) rotateY(90deg);
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        @keyframes scroll {
+            from{
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="1.jpg" alt=""></li>
+    <li><img src="2.jpg" alt=""></li>
+    <li><img src="3.jpg" alt=""></li>
+    <li><img src="4.jpg" alt=""></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

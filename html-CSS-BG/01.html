@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景属性</title>
+
+    <!--
+    1.可以设置背景颜色 bgc
+    2.可以设置背景图片,图片放在url中可以使本地的也可以是网络上的
+            注意;如果图片小于框架，默认是平铺的，以属性repeat控制
+平铺的用法：用于加载某些有规律的图片，节省时间减少内存。
+
+    3.背景图片位置:bgp:（left center right）(top center bottom);一般设置定不居中显示主要内容
+                    bgp:xpx ypx;像素接受负值
+
+    4.背景图片关联方式：bg-attachment: (scroll/fixed)设置是否让图片随着滚动条的滚动而滚动
+
+
+   div嵌套用于拼接图片
+
+
+    -->
+    <style>
+        img{
+            width: 100px;
+        }
+        div{
+            width: 500px;
+            height: 600px;
+        }
+        .as{
+            background-color: red;
+            background-image: url(15.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            /*background: red url("http://p5.so.qhimgs1.com/bdr/_240_/t01d7622b7786c68a3b.jpg")no-repeat fixed center center;*/
+            /*
+            缩写，任意一个都可以省略
+            */
+
+        }
+    </style>
+</head>
+<body>
+<div class="as">
+
+    <!--<img src="15.jpg" alt="">-->
+</div>
+</body>
+</html>

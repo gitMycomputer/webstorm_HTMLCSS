@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-动画模块其他属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*
+        除了from｛｝to｛｝外，还可以以百分比的形式设置
+        其他属性：w3school
+        animation-timing-function	规定动画的速度曲线。默认是 "ease"。
+        animation-iteration-count	规定动画被播放的次数
+        animation-direction	规定动画是否在从结束位置开始。默认是 "normal"。
+        animation-play-state	规定动画是否正在运行或暂停 用在hover上
+        */
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+        div:hover{
+            animation-play-state: paused;
+        }
+        @keyframes move{
+            0%{
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            25%{
+                margin-top: 0px;
+                margin-left: 100px;
+            }
+            50%{
+                margin-top: 100px;
+                margin-left: 100px;
+            }
+            75%{
+                margin-top: 100px;
+                margin-left: 0px;}
+            100%{
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

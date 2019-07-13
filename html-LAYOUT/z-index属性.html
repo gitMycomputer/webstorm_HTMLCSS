@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index属性</title>
+    <!--
+    1.定位流会覆盖标准流
+    2.后写的定位流会覆盖先写的
+    所有标签都有z-index属性默认情况下为0
+
+    3.在父元素未设置z-index时，谁的z-index越大谁就覆盖在最上面
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            z-index: 2
+        }
+        .box2{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: blue
+        }
+        .son1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            left: 200px;
+            top: 200px;
+            /*
+            绝对定位以body,含定位流的祖先元素为参考点,所以当box1设置定位流时，其参考点从浏览器的body转到父元素*/
+            /*z-index: 1;*/
+        }
+        .son2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            left: 250px;
+            top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="son1"></div>
+</div>
+<div class="box2">
+    <div class="son2"></div>
+</div>
+</body>
+</html>

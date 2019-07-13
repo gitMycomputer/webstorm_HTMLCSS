@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-各种转换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: gray;
+            border: 1px solid #000;
+        }
+        ul li{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 50px;
+            list-style: none;
+
+        }
+        ul li:nth-child(2){
+            /*
+            做平移（x,y）允许负值*/
+            transform: translate(50px,0px);
+        }
+        ul li:nth-child(3){
+            /*
+            做旋转（x,y）允许负值。注意：2D转换模块会随之旋转坐标系
+            */
+            transform: rotate(50deg);
+        }
+        ul li:nth-child(4){
+            /*
+            做缩放（x,y）允许负值
+            */
+            transform: scale(1.5,1);
+        }
+        ul li:nth-child(5){
+            /*
+            综合转换：不用逗号隔开，注意旋转后坐标系的改变使得之后的平移方向改变
+            */
+            transform: rotate(45deg) translate(50px,0px);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>正常</li>
+    <li>平移</li>
+    <li>旋转</li>
+    <li>缩放</li>
+    <li>综合</li>
+</ul>
+</body>
+</html>

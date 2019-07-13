@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-2D转换模块案例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin: 50px auto;
+            width: 422px;
+            height: 649px;
+            background-color: cadetblue;
+            border: 1px solid #000;
+            /*
+           perspective透视属性，展示远近效果，值表明面对的距离因此越大效果越不明显
+           注意：该属性必须写变化元素的上级元素中，一般是父类
+           */
+            perspective: 500px;
+
+        }
+        div img{
+            width: 422px;
+            height: 649px;
+            transform-origin: left;
+            transition: transform 4s;
+        }
+        div:hover img{
+            transform: rotateY(65deg);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="pk.jpg" alt="">
+</div>
+</body>
+</html>

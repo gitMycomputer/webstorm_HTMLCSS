@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-过度模块三要素</title>
+    <!--
+    一，所有标签都有hover属性
+    过度模块三要素：
+    1.必须有属性发生变化（hover）
+    2.必须告诉系统哪一个属性变化
+    3.必须告诉系统属性变化时间
+
+
+    注意：有多个属性变化时，由于CSS的层叠属性（后面会覆盖前面）不可以再写，只需要在原来后面加上逗号隔开
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 20px;
+            background-color: red;
+            transition-property: width,background-color;
+            transition-duration: 3s,3s;
+        }
+        div:hover{
+            width: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-正方体企业开发</title>
+    <!--
+    课时：185
+    企业开发中常用上，后，下，前的顺序来完成，两边不管
+    并且是先旋转在平移
+    特别要注意根2D模块一样，旋转后的坐标系液随之旋转，所以下面是向X轴平移
+    四个面旋转不同角度是为了始终以正确方向面向前方而没有颠倒的情况
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        ul li:nth-child(1){
+            background-color: red;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        ul li:nth-child(2){
+            background-color: blue;
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        ul li:nth-child(3){
+            background-color: yellow;
+            transform: rotateX(270deg) translateZ(100px);
+        }
+        ul li:nth-child(4){
+            background-color: green;
+            transform: rotateX(360deg) translateZ(100px);
+        }
+        ul li:nth-child(5) {
+            background-color: purple;
+            transform: translateX(-100px) rotateY(90deg);
+        }
+        ul li:nth-child(6){
+            background-color: skyblue;
+            transform: translateX(100px) rotateY(90deg);
+        }
+        </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-过度模块简写</title>
+    <!--
+    1.连写：transition: property duration timing-function delay;
+    2.多个属性变化时用逗号隔开
+    3.由三要素可知，后两个属性可以省略
+    4.超多个时可以简写为transition: all 5s
+
+
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: red;
+            /*transition-property: width;*/
+            /*transition-duration: 5s;*/
+
+            /*transition: width 5s,background-color 5s;*/
+        }
+        div:hover{
+            width: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

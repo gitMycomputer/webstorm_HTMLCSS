@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框与文本域</title>
+</head>
+<body>
+
+<!--
+两者不属于input内容不需要加上input
+
+1.下拉框select,内加上option选项 <    checkbox String[]>
+    指定默认值添加selected=‘selected’
+    添加范围select>optgroup*2>option*3,其中label指定范围
+
+2.文本域textarea< textfield>用于多行输入
+    默认可以手动缩放
+-->
+<h2>
+    selected
+</h2>
+<select>
+    <optgroup label="number">
+    <option value="">32</option>
+    <option value="">33</option>
+    <option value="">34</option>
+    <option value="">35</option>
+    <option value="" selected="selected">36</option>
+    </optgroup>
+    <optgroup label="chapter">
+        <option value="">a</option>
+        <option value="">s</option>
+        <option value="">d</option>
+        <option value="">z</option>
+
+    </optgroup>
+
+</select>
+
+<hr>
+
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+</body>
+</html>

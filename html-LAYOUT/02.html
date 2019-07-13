@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>定位流</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /*
+    1.相对定位
+    不脱标，以自己原来位置为参考点，区分三大元素,单个方向上只能设置一个
+    2.绝对定位
+    脱标，以body,含定位流的祖先元素为参考点，不区分三大元素
+    body中以首屏为基准，且会忽略祖先元素的padding
+    */
+    .class1{
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 10px;
+    }
+    .class2{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="class1"></div>
+<div class="class2"></div>
+</body>
+</html>

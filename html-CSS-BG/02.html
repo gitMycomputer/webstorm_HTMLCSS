@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIV嵌套</title>
+    <style>
+        .box1{
+            width: 1024px;
+            height: 600px;
+            background-image: url(15.jpg);
+            background-position: center center;
+        }
+        .box2{
+            width: 1024px;
+            height: 600px;
+            background-image: url(16.jpg);
+            background-repeat: no-repeat;
+            /*background-color: red;*/
+            background-position: center bottom;
+        }
+        /*
+        使用嵌套达到图片拼接的目的，注意嵌套的div大小要适合（至少是外部div的大小）
+        */
+    </style>
+</head>
+<body>
+
+
+<div class="box1">
+    <div class="box2"></div>
+</div>
+</body>
+</html>

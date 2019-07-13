@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-弹性效果</title>
+    <!--
+    弹性效果实际上是文字间距离增大
+    编写过度时先不要管过度，先写界面
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin-top: 50px;
+            height: 100px; /*div是行内元素，默认与父元素同宽*/
+            background-color: red;
+            /*-----以下两行实现了文字水平竖直居中*/
+            text-align: center;
+            line-height: 100px;
+        }
+        div span{
+            font-size: 80px;
+            /*!*margin: 0 20px;*!为什么不可以设置这里的值？*/
+            transition: margin 5s;
+        }
+        div:hover span{
+            margin: 0 60px; /*上下0像素，左右60像素*/
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <span>w</span>
+    <span>s</span>
+    <span>a</span>
+    <span>d</span>
+    <span>z</span>
+</div>
+</body>
+</html>

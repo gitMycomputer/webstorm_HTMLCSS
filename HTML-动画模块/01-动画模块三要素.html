@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-动画模块三要素</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            animation-name: falsh;
+            animation-duration: 3s;
+        }
+        /*
+        动画模块是不需要人为触发的模块
+        和过度模块一样动画模块也有三要素，：
+         1.animation-name: name;告诉系统要执行的动画名称
+         2.@keyframes name｛from{}to{}｝里面设置要变化的内容
+         3.设置时间
+        */
+        @keyframes falsh {
+            from{
+                margin-left: 0px;
+            }to{
+                 margin-left: 150px;
+             }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

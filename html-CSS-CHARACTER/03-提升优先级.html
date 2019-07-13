@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>！important</title>
+<!--
+提升直接选择器的某个属性优先级至最大
+-->
+    <style>
+        #as{
+            color: red;
+            font-style: italic;
+            font-size: 30px;
+        }
+        .asd{
+            color: green !important;
+            font-size: 50px;
+
+        }
+    </style>
+</head>
+<body>
+<p id="as" class="asd">我是段落</p>
+</body>
+</html>

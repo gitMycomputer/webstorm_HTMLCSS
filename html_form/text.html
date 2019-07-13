@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<body>
+<!--
+name属性
+一方面 如果需要提交时只提交有name属性的
+另一方面 用于单选框<radio>设置只能选择一个
+
+value属性
+用于定义值
+
+-->
+<!--
+单选框与多选框的name属性必须一致
+-->
+<!--
+accout=asd
+&password=asd
+&gender=female
+&hobby=ball
+&hobby=football
+&个人简介=%0D%0A+++++adsasa++
+&birthday=2019-01-02
+&email=asd%40qq.com
+&phonenumber=12314214
+提交后发现显示的值与选中的不符，所以需要加上value来指定值来实现上面效果
+
+-->
+<form action="http://www.baidu.com">
+
+    <p>
+        账号：
+        <input type="text" name="accout">
+    </p>
+    <p>
+        密码：
+        <input type="password" name="password">
+
+    </p>
+    <p>
+        性别：
+        <input type="radio" name="gender" value="male">男
+        <input type="radio" name="gender" value="female">女
+        <input type="radio" name="gender" checked="checked" value="secrete">保密
+    </p>
+    <p>
+        爱好：
+        <input type="checkbox" name="hobby" value="basketball">篮球
+        <input type="checkbox" name="hobby" value="ball">排球
+        <input type="checkbox" checked="checked" name="hobby" value="football">足球
+    </p>
+    <p>
+        个人简介：
+        <textarea name="个人简介" id="introduction" cols="30" rows="10">
+
+        </textarea>
+    </p>
+    <p>
+        时间：
+        <input type="date" name="birthday">
+    </p>
+    <p>
+        邮箱：
+        <input type="email" name="email">
+    </p>
+    <p>
+        电话：
+        <input type="number" name="phonenumber">
+    </p>
+    <p>
+        <input type="submit" value="注册">
+        <input type="reset" value="清空">
+    </p>
+
+
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="#introduction" target="_self">查看个人简介</a>
+
+</body>
+</html>

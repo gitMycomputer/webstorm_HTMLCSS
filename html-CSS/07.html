@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+
+    <!--
+    格式： label_name/id/class_nam1 label_name/id/class_nam1.....{}
+
+    -->
+    <style>
+        /*div p{*/
+            /*color: red;*/
+        /*}*/
+
+        /*.in p{*/
+            /*color: red;*/
+        /*}*/
+        
+        /*.in #123{*/
+            /*font-style: normal;*/
+            /*font-weight: bold;*/
+        /*}*/
+        .in .pa{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="in">
+    <p id="123" class="pa">psafsfa1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <ui>
+        <li></li>
+        <p>p4</p>
+    </ui>
+</div>
+</body>
+</html>

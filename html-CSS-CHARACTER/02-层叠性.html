@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层叠性</title>
+<!--
+两个选择器同时规定同一属性时会被覆盖
+有优先级确定
+
+
+优先级：
+1.是否直接选中，间接选中就是继承（谁离目标标签近，就听谁的）
+2.如果是直接选中，且选择器相同，谁后写就听谁的
+3.如果是直接选中，但选择器不同。按优先级（id>类>标签>通配>继承>默认）
+-->
+    <style>
+        p{
+            color: red;
+        }
+        .as{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<p class="as"> i am a apro</p>
+</body>
+</html>

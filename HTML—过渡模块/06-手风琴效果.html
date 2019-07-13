@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-手风琴效果</title>
+    <!--
+    首先认为全部变窄，只有一个变宽
+    ul:hover 使得鼠标悬停至ul时变窄
+     ul li:hover使得鼠标悬停在具体的li时该li变宽
+     由于总共是800像素，其他四个变为100时，悬停的应该变为400，如果小于400会出现最后一个也变宽的问题
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: red;
+            overflow: hidden;/*隐藏浮动超出的部分*/
+            border: 1px solid #000;
+        }
+        ul li{
+            list-style: none;
+            width: 160px;
+            height: 100px;
+            /*border: 1px solid #000;*/
+            float: left;
+            transition: width 5s;
+        }
+        ul:hover li{
+            width: 100px;
+        }
+        ul li:hover{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="right2.png" alt=""></li>
+    <li><img src="right2.png" alt=""></li>
+    <li><img src="right2.png" alt=""></li>
+    <li><img src="right2.png" alt=""></li>
+    <li><img src="right2.png" alt=""></li>
+</ul>
+</body>
+</html>

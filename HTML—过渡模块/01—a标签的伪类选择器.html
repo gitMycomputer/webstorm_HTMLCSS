@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签的伪类选择器</title>
+    <!--
+    a标签有四种不同状态：常态，点击后，鼠标悬停，长按
+    主要表现为颜色不一样
+
+
+    常态，link
+    点击后，visited
+    鼠标悬停，hover
+    长按 active
+    伪类选择器 a:状态｛｝
+
+       1.四个可以一起出现，但必须按照顺序遵守爱恨原则（love hate）可以再文档中查看
+       2.简写格式，相同的可以直接a{},然后写不同的
+    -->
+    <style>
+
+        a:link{
+            color: black;
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:active{
+            color: blue;
+        }
+        a:hover{
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+<a href="http:\\www.taobao.com" target="_blank">taobao</a>
+</body>
+</html>

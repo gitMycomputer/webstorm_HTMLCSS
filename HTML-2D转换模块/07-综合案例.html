@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07-综合案例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 400px;
+            height: 40px;
+            background-color: black;
+            margin: 100px auto;
+            color: white;
+            text-align: center;
+        }
+        /*!*.box2{*!这里由于是li的子元素，不设置box2的任何属性*/
+            /*width: 100px;*/
+            /*height: 200px;*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*background-color: black;*/
+            /*opacity:0;*/
+        /*}*/
+        .box1>li{
+            width: 120px;
+            height: 40px;
+            background-color: black;
+            list-style: none;
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .box2 li{
+            list-style: none;
+            transform: rotateY(180deg);
+            background-color: black;
+            transition: all 2s;/*这里需要过度才可以有效果而且下方设置的是延迟所以不层叠*/
+            opacity:0;
+            /*这是透明度的设置0-1*/
+        }
+        .box1>li:hover .box2 li{/*这里是li的总的设置，下面才一一设置延迟时间*/
+            transform: rotateY(0deg);
+            /*transition: none;*/
+            opacity: 1;
+        }
+        .box1>li:hover .box2>li:nth-child(1){
+            transition-delay: 200ms
+            /*transition: all 800ms;*/
+        }
+        .box1>li:hover .box2>li:nth-child(2){
+            transition-delay: 400ms
+        }
+        .box1>li:hover .box2>li:nth-child(3){
+            transition-delay: 600ms
+        }
+
+        /*这里去掉了hover，表明在鼠标移开后的事件，由于是返回初始状态，也可以设置延迟时间*/
+        .box1>li .box2>li:nth-child(1){
+
+            transition-delay: 600ms
+        }
+        .box1>li .box2>li:nth-child(2){
+            transition-delay: 400ms;
+        }
+        .box1>li .box2>li:nth-child(3){
+            transition-delay: 200ms;
+        }
+
+
+    </style>
+</head>
+<body>
+<ul class="box1">
+    <li>第一菜单
+        <ul class="box2">
+            <li>第二菜单</li>
+            <li>第二菜单</li>
+            <li>第二菜单</li>
+        </ul>
+
+    </li>
+    <li>第一菜单</li>
+    <li>第一菜单</li>
+</ul>
+</body>
+</html>

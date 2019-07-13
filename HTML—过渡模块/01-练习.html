@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习：导航条</title>
+    <!--
+    1.伪类选择器写在选择器后
+    2.和a盒子相关的属性写在标签选择器中
+    3.和a标签文字背景相关的写在伪类选择器
+
+
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 960px;
+            height: 50px;
+            margin: 100px auto;
+
+        }
+        ul li{
+            display: inline-block; /*//需要设为行内块级元素才可以设置大小*/
+            float: left; /*//浮动*/
+            width: 120px;
+            height: 50px;
+            background-color:purple;
+            list-style: none;
+            text-align: center; /*文字居中*/
+            line-height: 50px; /*设置行高等于整个高来完成居中*/
+        }
+        ul li a{
+            display: inline-block;
+            text-decoration: none; /*去除下划线*/
+            width: 120px;
+            height: 50px; /*设置行高等于li的高之后就可以实现整个部分在光标经过时变形*/
+        }
+        ul li a:link{
+            color: green;
+            background-color: pink;
+        }
+        ul li a:visited{
+            color: blue;
+        }
+        ul li a:hover{
+            color: red;
+        }
+        ul li a:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--ul>(li>a)*8-->
+<ul>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+    <li><a href="">我是导航</a></li>
+</ul>
+</body>
+</html>

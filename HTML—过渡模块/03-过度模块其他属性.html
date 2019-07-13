@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-过度模块其他属性</title>
+    <!--
+    过度模块中的其他属性
+    w3school中关于CSS过度中可以查询
+
+
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            margin: 0px auto;
+            border: 1px solid #000;
+
+        }
+        ul li{
+            list-style: none;
+            width: 100px;
+            height: 60px;
+            margin-top: 40px;
+            background-color: blue;
+            transition-property: margin-left;
+            transition-duration: 5s;
+
+        }
+        ul:hover li{ /*ul在光标悬停时li标签的变化*/
+            margin-left: 500px;
+        }
+        ul li:nth-child(1){/*第一个li*/
+            transition-delay: 2s; /*延迟设置*/
+        }
+        ul li:nth-child(2){
+            transition-timing-function: linear;
+        }
+        ul li:nth-child(3){
+            transition-timing-function: ease;
+        }
+        ul li:nth-child(4){
+            transition-timing-function: ease-in;
+        }
+        ul li:nth-child(5){
+            transition-timing-function: ease-out;
+        }
+        ul li:nth-child(6){
+            transition-timing-function: ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>延迟</li>
+    <li>liner</li>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+</ul>
+</body>
+</html>

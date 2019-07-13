@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合并单元格</title>
+</head>
+<body>
+<!--
+所有合并都是向后向下合并；
+1.水平居中 colspan=“2”表示把一个单元格看做两个，因此需要删除一行内的一个
+2.垂直居中 rowspan="2" 表示把一个单元格看做两个，因此需要删除一列内的一个
+-->
+<table bgcolor="black" width="500px">
+    <caption><h2>居中单元格</h2></caption>
+    <tr bgcolor="white">
+        <td colspan="2">21</td>
+        <td></td>
+
+    </tr>
+    <tr  bgcolor="white">
+        <td></td>
+        <td rowspan="2">32</td>
+        <td></td>
+    </tr>
+    <tr  bgcolor="white">
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

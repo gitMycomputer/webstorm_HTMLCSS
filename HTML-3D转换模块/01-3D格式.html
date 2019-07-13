@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-3D格式</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*
+        3d与2d的区别在于3D有厚度
+        如果想要让某一元素为3D就设置其父元素
+        transform-style: preserve-3d;
+        */
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid #000;
+            margin: 100px auto;
+            perspective: 100px;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid #000;
+            margin: 50px auto;
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

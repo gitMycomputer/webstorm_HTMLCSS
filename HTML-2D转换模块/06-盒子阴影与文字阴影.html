@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-盒子阴影与文字阴影</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            margin: 50px auto;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+            line-height: 200px;
+            box-shadow: 10px 10px 10px 0px;
+            color:yellow;
+            /*
+            box-shadow:
+            水平阴影的位置 垂直阴影的位置 模糊距离 阴影的尺寸 color inset(将外部阴影将外部阴影 (outset)改为内部阴影改为内部阴影);
+
+            注意：阴影颜色默认是与内容颜色相匹配,阴影默认是外部，内部需要加outset
+            简写：水平阴影的位置 垂直阴影的位置 模糊距离
+            */
+        }
+        .box2{
+            margin: 50px auto;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            text-align: center;
+            line-height: 200px;
+            text-shadow: 3px 3px 10px;
+            font-size: 30px;
+            /*
+            text-shadow: h-shadow v-shadow blur color;
+            水平阴影的位置 垂直阴影的位置 模糊距离 颜色
+
+             简写：水平阴影的位置 垂直阴影的位置 模糊距离
+             阴影颜色默认是与文字颜色相匹配
+            */
+        }
+    </style>
+</head>
+<body>
+<div class="box1">盒子阴影</div>
+<div class="box2">文字阴影</div>
+
+</body>
+</html>
